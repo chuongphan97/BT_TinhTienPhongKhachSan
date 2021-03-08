@@ -56,7 +56,8 @@
                 
               
             } else {
-                d =Intl.NumberFormat('vi-VN', {style: 'currency', currency: 'VND'}).format((c%7)*7*a*0.9 + (7-(c%7)*7)*a);
+                let e= ((c%7)*7)*a*0.9 + (c-(c%7)*7)*a;
+                d =Intl.NumberFormat('vi-VN', {style: 'currency', currency: 'VND'}).format(e);
                 document.write('<h2>Số ngày lưu trú: '+c+'</h2><br><h2>Tổng tiền:' + d + '</h2>');
             }
         }
